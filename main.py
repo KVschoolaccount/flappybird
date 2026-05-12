@@ -1,3 +1,4 @@
+#wijziging door mrbijee
 spaargeld = int(input("Hoeveel spaargeld heb je?"))
 scooter = 1500
 
