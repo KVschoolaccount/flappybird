@@ -1,7 +1,10 @@
 [NEAT]
-fitness_criterion     = max % for keeping birds or killing tem
-fitness_threshold     = 100 % if we have bird that reaches 100 = good enough
-pop_size              = 100 % how many birds go through the simulation 
+fitness_criterion     = max 
+# for keeping birds or killing tem
+fitness_threshold     = 100 
+# if we have bird that reaches 100 = good enough
+pop_size              = 100 
+# how many birds go through the simulation 
 reset_on_extinction   = False
 no_fitness_termination = False
 
@@ -19,9 +22,11 @@ aggregation_options     = sum
 # node bias options
 bias_init_mean          = 0.0
 bias_init_stdev         = 1.0
-bias_max_value          = 30.0 %min/max value of weights in neural network
+bias_max_value          = 30.0 
+# min/max value of weights in neural network
 bias_min_value          = -30.0
-bias_mutate_power       = 0.5 % how likely the weights will mutate
+bias_mutate_power       = 0.5 
+# how likely the weights will mutate
 bias_mutate_rate        = 0.7
 bias_replace_rate       = 0.1
 
@@ -30,11 +35,13 @@ compatibility_disjoint_coefficient = 1.0
 compatibility_weight_coefficient   = 0.5
 
 # connection add/remove rates
-conn_add_prob           = 0.5 #how likely add/delete new connection
+conn_add_prob           = 0.5 
+#how likely add/delete new connection
 conn_delete_prob        = 0.5
 
 # connection enable options
-enabled_default         = True % default all connections active, 1% chance of deactivation
+enabled_default         = True 
+# default all connections active, 1 percent chance of deactivation
 enabled_mutate_rate     = 0.01
 
 feed_forward            = True
@@ -73,7 +80,8 @@ compatibility_threshold = 3.0
 
 [DefaultStagnation]
 species_fitness_func = max
-max_stagnation       = 20 % species die after stagnating for 20 gens
+max_stagnation       = 20 
+# species die after stagnating for 20 gens
 species_elitism      = 2
 
 [DefaultReproduction]

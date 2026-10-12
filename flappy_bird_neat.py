@@ -11,7 +11,7 @@ import os
 import time
 import neat
 #import visualize
-#import pickle
+import pickle #thing for saving AI that is good
 pygame.font.init()  # init font
 
 WIN_WIDTH = 600
@@ -133,8 +133,8 @@ class Pipe():
     """
     represents a pipe object
     """
-    GAP = 160
-    VEL = 5
+    GAP = 160 #pipe gap 160
+    VEL = 5 #pipe velocity 5
 
     def __init__(self, x):
         """
@@ -304,7 +304,6 @@ def draw_window(win, birds, pipes, base, score, gen, pipe_ind):
 
     pygame.display.update()
 
-
 def eval_genomes(genomes, config):
     """
     runs the simulation of the current population of
@@ -334,7 +333,7 @@ def eval_genomes(genomes, config):
 
     run = True
     while run and len(birds) > 0:
-        clock.tick(60)
+        clock.tick(100) #framerate 100
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -428,6 +427,7 @@ def run(config_file):
     #
     #to play the endgame with only the best bird e.g.
     #play_with_best_bird("winner.pkl", config)
+
 
 if __name__ == '__main__':
     # Determine path to configuration file. This path manipulation is
