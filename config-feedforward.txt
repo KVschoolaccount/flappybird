@@ -3,7 +3,7 @@ fitness_criterion     = max
 # for keeping birds or killing tem
 fitness_threshold     = 100 
 # if we have bird that reaches 100 = good enough
-pop_size              = 100 
+pop_size              = 10
 # how many birds go through the simulation 
 reset_on_extinction   = False
 no_fitness_termination = False

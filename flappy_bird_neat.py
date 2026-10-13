@@ -14,6 +14,7 @@ import neat
 import pickle #thing for saving AI that is good
 pygame.font.init()  # init font
 
+
 WIN_WIDTH = 600
 WIN_HEIGHT = 800
 FLOOR = 730
@@ -333,7 +334,7 @@ def eval_genomes(genomes, config):
 
     run = True
     while run and len(birds) > 0:
-        clock.tick(100) #framerate 100
+        clock.tick(200) #framerate 100
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -395,6 +396,8 @@ def eval_genomes(genomes, config):
                 birds.pop(birds.index(bird))
 
         draw_window(WIN, birds, pipes, base, score, gen, pipe_ind)
+        if score == 100:
+            break
 
 def run(config_file):
     """
@@ -437,3 +440,4 @@ if __name__ == '__main__':
     config_path = os.path.join(local_dir, 'config-feedforward.txt')
     run(config_path)
     pygame.quit()
+
