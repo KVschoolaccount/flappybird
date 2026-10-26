@@ -305,6 +305,10 @@ def draw_window(win, birds, pipes, base, score, gen, pipe_ind):
 
     pygame.display.update()
 
+# deze code is in comments omdat het voor training is, de trainingsfase is nu voltooid en we hebben een winner.pkl met de beste vogel
+    # ||||
+    # vvvv
+    
 # def eval_genomes(genomes, config):
 #     """
 #     runs the simulation of the current population of
@@ -399,12 +403,13 @@ def draw_window(win, birds, pipes, base, score, gen, pipe_ind):
 #         if score == 100:
 #             break
 
+# geschreven door replit agent: spelen met alleen de winner.pkl
 def play_with_best_bird(winner_path, config):
     """Load a saved NEAT genome and play one Flappy Bird game with it."""
     if not os.path.isabs(winner_path):
         winner_path = os.path.join(os.path.dirname(__file__), winner_path)
 
-    # Only load pickle files you trust: unpickling can execute code.
+    # replit agent heeft deze code verbeterd zodat er niet nieuwe pkls gemaakt worden
     with open(winner_path, "rb") as winner_file:
         genome = pickle.load(winner_file)
 
@@ -473,7 +478,7 @@ def play_with_best_bird(winner_path, config):
 
     return score
 
-
+# replit agent heeft deze code veranderd zodat de winner.pkl wordt gebruikt i.p.v. een andere ongedefineerde winner
 def run(config_file):
     """Load the saved winner genome and run it in the game."""
     config = neat.config.Config(
