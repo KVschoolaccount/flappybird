@@ -1,10 +1,10 @@
 [NEAT]
 fitness_criterion     = max 
-# for keeping birds or killing tem
+# voor het behouden of het weghalen van vogels
 fitness_threshold     = 100 
-# if we have bird that reaches 100 = good enough
+# Als een vogel tot 100 komt, is het fit.
 pop_size              = 10
-# how many birds go through the simulation 
+# Hoeveel vogels door de simulatie gaan
 reset_on_extinction   = False
 no_fitness_termination = False
 
@@ -23,10 +23,10 @@ aggregation_options     = sum
 bias_init_mean          = 0.0
 bias_init_stdev         = 1.0
 bias_max_value          = 30.0 
-# min/max value of weights in neural network
+# min./max. waarde van gewichten in een neuraal netwerk
 bias_min_value          = -30.0
 bias_mutate_power       = 0.5 
-# how likely the weights will mutate
+# hoe waarschijnlijk het is dat de gewichten muteren
 bias_mutate_rate        = 0.7
 bias_replace_rate       = 0.1
 
@@ -36,12 +36,12 @@ compatibility_weight_coefficient   = 0.5
 
 # connection add/remove rates
 conn_add_prob           = 0.5 
-#how likely add/delete new connection
+#hoe waarschijnlijk is het dat er een nieuwe verbinding wordt toegevoegd of verwijderd
 conn_delete_prob        = 0.5
 
 # connection enable options
 enabled_default         = True 
-# default all connections active, 1 percent chance of deactivation
+# standaard zijn alle verbindingen actief, 1 procent kans op deactivering
 enabled_mutate_rate     = 0.01
 
 feed_forward            = True
@@ -81,7 +81,7 @@ compatibility_threshold = 3.0
 [DefaultStagnation]
 species_fitness_func = max
 max_stagnation       = 20 
-# species die after stagnating for 20 gens
+# Soorten sterven uit na 20 generaties stagnatie.
 species_elitism      = 2
 
 [DefaultReproduction]
