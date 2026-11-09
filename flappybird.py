@@ -333,7 +333,7 @@ def eval_genomes(genomes, config):
 
     run = True
     while run and len(birds) > 0:
-        clock.tick(100) #framerate 100
+        clock.tick(1000) #framerate 1000, zodat de training sneller gaat
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
